@@ -88,15 +88,14 @@ function abrirModal(hora) {
   let totalMinutos = 0;
 
   for (let i = 0; i < reservas.length; i++) {
-    let r = reservas[i];
-    if (r.franja === hora) {
-      let act = buscarActividad(r.actividadId);
-      let carga = r.personas * act.duracion;
+    if (reservas[i].franja === hora) {
+      let act = buscarActividad(reservas[i].actividadId);
+      let carga = reservas[i].personas * act.duracion;
       totalMinutos += carga;
 
       filas += "<tr>";
       filas += "  <td>" + act.nombre + "</td>";
-      filas += "  <td>" + r.personas + "</td>";
+      filas += "  <td>" + reservas[i].personas + "</td>";
       filas += "  <td>" + act.duracion + "</td>";
       filas += "  <td>" + carga + "</td>";
       filas += "</tr>";
