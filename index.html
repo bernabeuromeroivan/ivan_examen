@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reservas del gimnasio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Reservas del gimnasio</h1>
+  <button id="btnToggle">Mostrar/Ocultar lista de actividades</button>
+
+  <div class="contenedor">
+    <div id="izquierda">
+      <h2>Actividades</h2>
+      <table>
+        <thead>
+          <tr><th>Imagen</th><th>Actividad</th><th>Duración</th><th>Intensidad</th></tr>
+        </thead>
+        <tbody id="tablaActividades"></tbody>
+      </table>
+    </div>
+
+    <div id="derecha">
+      <h2>Nueva reserva</h2>
+      <div class="controles">
+        <select id="selActividad"></select>
+        <select id="selPersonas"></select>
+        <select id="selFranja"></select>
+        <button id="btnReservar">Registrar reserva</button>
+      </div>
+
+      <h2>Franjas horarias</h2>
+      <div id="franjas" class="franjas"></div>
+    </div>
+  </div>
+
+  <div id="modal">
+    <div class="caja">
+      <h3 id="modalTitulo"></h3>
+      <table>
+        <thead>
+          <tr><th>Actividad</th><th>Personas</th><th>Duración (min)</th><th>Carga (min)</th></tr>
+        </thead>
+        <tbody id="modalFilas"></tbody>
+      </table>
+      <p id="modalTotal"></p>
+      <button id="btnCerrar">Cerrar</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
